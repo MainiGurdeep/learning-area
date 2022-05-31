@@ -1,0 +1,158 @@
+<html>
+<title>ist code</title>
+
+<body>
+
+  <script>
+    // let arr = [32, 34, 45, 24, 23];
+    // // var sum=  arr.reduce((prevValue,currentValue)=>prevValue+currentValue,10);
+    // // console.log(sum);
+
+    // // Array.prototype.reduce=function (callback, initialValue = null){
+    // //   let accumulator = initialValue;
+    // //   for (let i = 0; i < this.length; i++) {
+    // //     accumulator = callback(accumulator, this[i], i, this);
+
+    // //   }
+    // //   return accumulator;
+    // // };
+    // // const sum = arr.reduce((prev, current) => prev + current);
+    // // console.log(sum);
+
+
+    // // 1.reduce
+
+    // let sum = arr.reduce((prev, current) => prev + current, 10);
+    // console.log(sum);
+
+    // Array.prototype.myreduce = function (callback, initialValue = 10) {
+    //   let accumulator = initialValue;
+    //   for (let i = 0; i < this.length; i++) {
+    //     accumulator = callback(accumulator, this[i], i, this);
+    //   }
+    //   return accumulator;
+    // };
+    // let sum1 = arr.myreduce((prevValue, currentValue) => prevValue + currentValue);
+    // console.log(sum1);
+
+
+
+    // // 2.filter
+
+    // // let filterarray = arr.filter((val, index, array) => val < 24)
+
+    // // console.log(arr);
+    // // console.log(filterarray);
+
+    // Array.prototype.myfilter = function (callback) {
+    //   let newarray = [];
+    //   for (let i = 0; i < this.length; i++) {
+    //     if (callback(this[i], i, this)) {
+    //       newarray.push(this[i])
+    //     }
+    //   }
+    //   return newarray;
+
+    // };
+    // let polyfilteredarray = arr.myfilter((val, index, array) => val < 45);
+    // console.log(arr);
+    // console.log(polyfilteredarray);
+
+
+    // // 3.polyfill for map
+    // let arr1 = [1, 2, 3];
+    // let maparray = arr1.map((val, index, array) => val * 3);
+    // console.log(arr1);
+    // console.log(maparray);
+
+    // Array.prototype.mymap = function (callback) {
+    //   newarray = [];
+    //   for (let i = 0; i < this.length; i++) {
+    //     newarray.push(callback(this[i], i, this));
+    //   }
+    //   return newarray;
+    // }
+
+
+    // let polymappedarray = arr1.mymap((val, index, array) => val * 6);
+    // console.log(polymappedarray);
+
+    // // 4.polyfill for join
+
+    // let joinedarr = arr.join('&');
+    // console.log(joinedarr);
+
+    // Array.prototype.myjoin = function () {
+    //   let newarray = [];
+    //   for (let i = 0; i < this.length; i++) {
+    //     newarray.push(this[i]);
+
+    //   }
+    //   return newarray.join('#');
+    // }
+
+    // let polyjoinedarray = arr.myjoin();
+    // console.log(polyjoinedarray);
+
+
+    // // 4.polyfill for foreach
+
+    // (arr.forEach((value, index, array) => console.log(value)));
+
+    // Array.prototype.myforeach = function (callback) {
+    //   for (let i = 0; i < this.length; i++) {
+    //     callback(this[i], i, this);
+    //   }
+    // }
+
+
+    // arr.myforeach((value, index, array) => console.log(value));
+
+
+    // const promise1 = Promise.resolve(1);
+    // const promise2 = 2;
+    // const promise3 = new Promise((resolve, reject) => {
+    //   setTimeout(resolve, 100, 'gurjit');
+    // });
+
+    // Promise.all([promise1, promise2, promise3]).then((values)=> {
+    //   console.log(values);
+    // });
+
+
+
+    var obj = {
+    a: {
+        b: {
+            c: 12,
+            j: false
+        },
+        k: null
+    }
+};
+
+// const object={a:2,b:3,c:5}
+
+ const findPath = (object, path) => {
+
+    for(let props in obj){
+      const paths=obj[props];
+      // let [paths]=object[props];
+      console.log(paths);
+    }
+  };
+//       if(object===paths[i]){
+//           return object.paths[i];
+//       }  
+//         else{
+//             return undefined;
+//         }      
+//     }
+ console.log(findPath(paths,a);
+// };
+
+
+  </script>
+</body>
+
+</html>
