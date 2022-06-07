@@ -6,18 +6,20 @@
 
 
 const chunk = (arr, size) => {
-    for(let i=0;i<arr.length;i=i+size){
-        const temp=arr.slice(i,i+size);
-        if(i==0) {
-            returnVal = "[[" +temp +"]";
-        } else {
-            returnVal = returnVal + ",[" +temp +"]"; 
-        }   
-    }
+    const chunked=[];
+ 
     
-     return returnVal+']';
+    let last=chunked[chunked.length-1];
+    for(let elem of arr){
+        if(!last || last.length===size){
+            chunked.push([elem]);
+        }
+        else{
+            last.push(elem);
+        }
+    }
+    return chunked;
 };
-
 
 
 console.log(chunk([2, 4, 2, 5, 3, 6, 3], 3)); // [[2, 4, 2], [5, 3, 6], [3]]
@@ -26,3 +28,7 @@ console.log(chunk([2, 4, 2, 5, 3, 6], 2)); // [[2, 4], [2, 5], [3, 6]]
 console.log(chunk([2, 4, 2, 5, 3, 6, 3], 1)); // [[2], [4], [2], [5], [3], [6], [3]]
 console.log(chunk([2, 4, 2, 5], 5)); // [[2, 4, 2, 5]]
 console.log(chunk([2, 2], 3)); // [[2, 2]]
+
+
+
+
